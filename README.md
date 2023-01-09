@@ -1,2 +1,2 @@
 # MobileSpinner
-Automtic mobile spinner 
+Automatic mobile spinner 
