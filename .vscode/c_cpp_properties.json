@@ -8,8 +8,9 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/include",
-                "C:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/src",
+                "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/include",
+                "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/src",
+                "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/.pio/libdeps/digispark-pro/Adafruit NeoPixel",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/cores/pro",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/variants/pro",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/Adafruit_NeoPixel",
@@ -41,8 +42,9 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/include",
-                    "C:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/src",
+                    "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/include",
+                    "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/src",
+                    "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/.pio/libdeps/digispark-pro/Adafruit NeoPixel",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/cores/pro",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/variants/pro",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/Adafruit_NeoPixel",
