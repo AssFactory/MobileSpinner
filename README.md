@@ -1,0 +1,2 @@
+# MobileSpinner
+Automtic mobile spinner 
