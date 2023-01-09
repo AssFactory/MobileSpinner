@@ -20,7 +20,7 @@ unsigned long aktTime;
 bool servoDirRight;
 uint16_t lastHue;
 
-void setup() 
+void setup()
 {
   // init variables
   servroRefreshed = 0;
@@ -29,10 +29,10 @@ void setup()
   servoDirRight = true;
   lastHue = 0;
 
-  // init neopixel ring 
+  // init neopixel ring
   ring.begin();
   ring.rainbow(lastHue);
-  ring.show(); 
+  ring.show();
 
   // init servo object
   servo.attach(SERVO_Pin);
@@ -42,15 +42,17 @@ void setup()
   servo.refresh();
 }
 
-void loop() 
+void loop()
 {
   aktTime = millis();
 
-  if(aktTime > servroRefreshed)
+  if (aktTime > servroRefreshed)
   {
     servroRefreshed = aktTime + SERVO_REFRESH_INTERVALL;
+
+    // calcualte next servo pos
     uint8_t pos = servo.read();
-    if(servoDirRight)
+    if (servoDirRight)
     {
       pos++;
     }
@@ -59,21 +61,27 @@ void loop()
       pos--;
     }
 
-    if(pos == 0 || pos == 180)
+    // change direction if servo at end position
+    if (pos == 0 || pos == 180)
     {
       servoDirRight = !servoDirRight;
       servroRefreshed += SERVO_DIR_CHANGE_DELAY;
     }
 
+    // update position
     servo.write(pos);
     servo.refresh();
   }
 
-  if(aktTime > ringRefreshed)
+  if (aktTime > ringRefreshed)
   {
     ringRefreshed = aktTime + RING_REFRESH_INTERVALL;
+
+    // calcualte new colors for all pixels of the ring
     lastHue += (65535 / ring.numPixels());
     ring.rainbow(lastHue);
+
+    // show changes
     ring.show();
   }
 }
