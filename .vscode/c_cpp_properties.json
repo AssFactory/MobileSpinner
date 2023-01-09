@@ -10,9 +10,10 @@
             "includePath": [
                 "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/include",
                 "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/src",
-                "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/.pio/libdeps/digispark-pro/Adafruit NeoPixel",
-                "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/cores/pro",
-                "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/variants/pro",
+                "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftRcPulseOut",
+                "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/.pio/libdeps/digispark-tiny/Adafruit NeoPixel",
+                "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/cores/dtiny",
+                "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/variants/digispark",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/Adafruit_NeoPixel",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/ArduinoWiiClassicController",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkCDC",
@@ -25,7 +26,6 @@
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkRcSeq",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSimpleServo",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftRcPulseIn",
-                "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftRcPulseOut",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftSerial",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkTinyPinChange",
                 "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkTinySoftPwm",
@@ -44,9 +44,10 @@
                 "path": [
                     "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/include",
                     "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/src",
-                    "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/.pio/libdeps/digispark-pro/Adafruit NeoPixel",
-                    "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/cores/pro",
-                    "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/variants/pro",
+                    "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftRcPulseOut",
+                    "c:/Users/Grauer/Documents/PlatformIO/Projects/MobileSpinner/.pio/libdeps/digispark-tiny/Adafruit NeoPixel",
+                    "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/cores/dtiny",
+                    "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/variants/digispark",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/Adafruit_NeoPixel",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/ArduinoWiiClassicController",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkCDC",
@@ -59,7 +60,6 @@
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkRcSeq",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSimpleServo",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftRcPulseIn",
-                    "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftRcPulseOut",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkSoftSerial",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkTinyPinChange",
                     "C:/Users/Grauer/.platformio/packages/framework-arduino-avr-digistump/libraries/DigisparkTinySoftPwm",
@@ -77,18 +77,17 @@
             "defines": [
                 "PLATFORMIO=60105",
                 "ARDUINO_AVR_DIGISPARK",
-                "SERIAL_BUFFER_SIZE=16",
-                "F_CPU=16000000L",
+                "F_CPU=16500000L",
                 "ARDUINO_ARCH_AVR",
                 "ARDUINO=10808",
-                "__AVR_ATtiny167__",
+                "__AVR_ATtiny85__",
                 ""
             ],
             "cStandard": "c11",
             "cppStandard": "c++11",
             "compilerPath": "C:/Users/Grauer/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
             "compilerArgs": [
-                "-mmcu=attiny167",
+                "-mmcu=attiny85",
                 ""
             ]
         }
