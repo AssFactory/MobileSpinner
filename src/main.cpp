@@ -7,9 +7,9 @@
 #define SERVO_Pin 2
 
 // wait times
-#define RING_REFRESH_INTERVALL 10
-#define SERVO_REFRESH_INTERVALL 15
-#define SERVO_DIR_CHANGE_DELAY 1000
+#define RING_REFRESH_INTERVALL 1000
+#define SERVO_REFRESH_INTERVALL 30
+#define SERVO_DIR_CHANGE_DELAY 1500
 
 // declare objects and variables
 Adafruit_NeoPixel ring = Adafruit_NeoPixel(12, LED_PIN, NEO_GRB + NEO_KHZ800);
