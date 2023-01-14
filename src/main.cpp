@@ -70,8 +70,8 @@ void loop()
 
     // update position
     servo.write(pos);
-    servo.refresh();
   }
+  servo.refresh();
 
   if (aktTime > ringRefreshed)
   {
