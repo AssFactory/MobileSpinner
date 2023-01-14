@@ -7,8 +7,8 @@
 #define SERVO_Pin 2
 
 // constants
-#define LED_RING_CHANGE_DELAY_MS 1000
-#define LED_RING_COLOR_STEP 800
+#define LED_RING_CHANGE_DELAY_MS 50
+#define LED_RING_COLOR_STEP 3200
 
 #define SERVO_STEP_CHANGE_DELAY_MS 30
 #define SERVO_DIR_CHANGE_DELAY_MS 1500
@@ -18,6 +18,7 @@ Adafruit_NeoPixel ledRing = Adafruit_NeoPixel(12, LED_PIN, NEO_GRB + NEO_KHZ800)
 unsigned long ledRingColorChanged;
 uint16_t lastPixel;
 uint16_t lastHue;
+uint32_t lastColor;
 
 SoftRcPulseOut servo;
 unsigned long servoPosChanged;
@@ -37,9 +38,9 @@ void setup()
 
   // init neopixel ring
   ledRing.begin();
-  uint32_t color = Adafruit_NeoPixel::ColorHSV(lastHue);
-  color = Adafruit_NeoPixel::gamma32(color);
-  ledRing.fill(color);
+  lastColor = Adafruit_NeoPixel::ColorHSV(lastHue);
+  lastColor = Adafruit_NeoPixel::gamma32(lastColor);
+  ledRing.fill(lastColor);
   ledRing.show();
 
   // init servo object
@@ -76,16 +77,16 @@ void setNextServoPos()
 
 void setNextRingColors()
 {
-  // calcualte new colors next pixel
-  uint32_t color = Adafruit_NeoPixel::ColorHSV(lastHue);
-  color = Adafruit_NeoPixel::gamma32(color);
-  ledRing.setPixelColor(lastPixel, color);
+  // set next pixel color
+  ledRing.setPixelColor(lastPixel, lastColor);
   lastPixel++;
 
-  // if end of ring is reached set next color step
+  // if end of ring is reached calculate next color step
   if (lastPixel == ledRing.numPixels())
   {
     lastHue += LED_RING_COLOR_STEP;
+    lastColor = Adafruit_NeoPixel::ColorHSV(lastHue);
+    lastColor = Adafruit_NeoPixel::gamma32(lastColor);
     lastPixel = 0;
   }
 
