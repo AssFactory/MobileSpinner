@@ -10,7 +10,7 @@
 #define LED_RING_CHANGE_DELAY_MS 50
 #define LED_RING_COLOR_STEP 3200
 
-#define SERVO_STEP_CHANGE_DELAY_MS 30
+#define SERVO_STEP_CHANGE_DELAY_MS 50
 #define SERVO_DIR_CHANGE_DELAY_MS 1500
 
 // declare objects and variables
