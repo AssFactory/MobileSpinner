@@ -4,7 +4,7 @@
 
 // hardware definition
 #define LED_PIN 0
-#define SERVO_Pin 3
+#define SERVO_Pin 2
 
 // wait times
 #define RING_REFRESH_INTERVALL 10
