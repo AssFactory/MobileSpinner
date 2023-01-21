@@ -9,6 +9,7 @@
 // constants
 #define LED_RING_CHANGE_DELAY_MS 50
 #define LED_RING_COLOR_STEP 3200
+#define LED_RING_BRIGHTNESS 150
 
 #define SERVO_STEP_CHANGE_DELAY_MS 50
 #define SERVO_DIR_CHANGE_DELAY_MS 1500
@@ -38,7 +39,7 @@ void setup()
 
   // init neopixel ring
   ledRing.begin();
-  lastColor = Adafruit_NeoPixel::ColorHSV(lastHue);
+  lastColor = Adafruit_NeoPixel::ColorHSV(lastHue, 255, LED_RING_BRIGHTNESS);
   lastColor = Adafruit_NeoPixel::gamma32(lastColor);
   ledRing.fill(lastColor);
   ledRing.show();
@@ -85,7 +86,7 @@ void setNextRingColors()
   if (lastPixel == ledRing.numPixels())
   {
     lastHue += LED_RING_COLOR_STEP;
-    lastColor = Adafruit_NeoPixel::ColorHSV(lastHue);
+    lastColor = Adafruit_NeoPixel::ColorHSV(lastHue, 255, LED_RING_BRIGHTNESS);
     lastColor = Adafruit_NeoPixel::gamma32(lastColor);
     lastPixel = 0;
   }
